@@ -1,4 +1,4 @@
-#SOHalloran Projects  
+## SOHalloran Projects  
 
 ### STEM Projects  
 
