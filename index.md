@@ -1,9 +1,9 @@
-## Sohalloran Projects
+## SOHalloran Projects
 
 ## STEM Projects
 
 ### Microbit Projects
-[Link](url)
+[Microbit Project](./microbit-projects)
 
 ### Scratch Projects
-[Link](url)
+[Scratch Projects](https://scratch.mit.edu/users/sohalloran2/)
