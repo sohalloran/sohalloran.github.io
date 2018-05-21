@@ -1,4 +1,8 @@
-## SOHalloran Projects
+---
+layout: post
+title: SOHalloran Projects
+---
+#SOHalloran Projects
 
 ### STEM Projects
 
