@@ -3,7 +3,7 @@
 ### STEM Projects  
 ----
 
-#### Microbit Projects  
+#### Micro:bit Projects  
 [Microbit Projects](./microbit-projects){:target="_blank"}  
 
 ----
