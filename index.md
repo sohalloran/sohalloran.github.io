@@ -4,7 +4,7 @@
 ----
 
 #### Micro:bit Projects  
-[Microbit Projects](./microbit-projects){:target="_blank"}  
+[Micro:bit Projects](./microbit-projects){:target="_blank"}  
 
 ----
 #### Scratch Projects  
