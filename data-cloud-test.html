@@ -1,1 +1,38 @@
-<b>Test</b>
+<html>
+<head>
+  <script src="https://cdn.c360a.salesforce.com/beacon/c360a/44603389-62d6-4f76-9d6c-2abf4685bca9/scripts/c360a.min.js"></script>
+</head>  
+  <body>
+    <b>test</b>
+  </body>
+  <script>
+
+SalesforceInteractions.init({
+  consents: [{
+    purpose: "Tracking", 
+    provider: "OneTrust", 
+    status: "Opt In"
+  }]
+})
+
+SalesforceInteractions.sendEvent({
+    interaction : {
+        name : "View Catalog Object",
+        catalogObject: { 
+          type : "Product", 
+          id : "65e4e737",
+          attributes: {
+            description: "Shoes"
+          }
+        }
+    },
+    user: {
+        attributes: {
+            email: 'user@domain.com'
+        }
+    }
+})
+
+    
+  </script>
+</html>
