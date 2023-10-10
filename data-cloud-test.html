@@ -4,15 +4,23 @@
 </head>  
   
   <body> 
-    <button id="opt-in">opt-in</button>
-    <button id="opt-out">opt-out</button>
+    <button id="opt-in">opt-in</button><br/>
+    <button id="opt-out">opt-out</button><br/>
 
     <form class="user-signup-form">
+      user_email<br/>
       <input type="text" id="user_email" name="user_email">
+      phone<br/>
+      <input type="text" id="phone" name="phone">
+      firstname<br/>
+      <input type="text" id="firstname" name="firstname">
+      lastname<br/>
+      <input type="text" id="lastname" name="lastname">
+      <br/>
       <button type="submit" value="Submit">Submit</button>
+      <br/>
+      <button id="register">register</button>
     </form>
-
-    <button class="add-to-cart" value="add-to-cart">add-to-cart</button>
   </body>
   
   <script>
@@ -190,6 +198,46 @@ SalesforceInteractions.init({
   })
 })
 
+
+    SalesforceInteractions.listener('click', '#register', () => {
+        SalesforceInteractions.reinit()
+        const email = document.getElementById("user_email").value
+        const phone = document.getElementById("phone").value
+        const firstname = document.getElementById("firstname").value
+        const lastname = document.getElementById("lastname").value
+
+        if (email) {
+          SalesforceInteractions.sendEvent({
+            user: {
+              attributes: {
+                email: email,
+                eventType: 'contactPointEmail'
+
+              }
+            }
+          })
+        }
+        if (phone) {
+          SalesforceInteractions.sendEvent({
+            user: {
+              attributes: {
+                phoneNumber: phone,
+                eventType: 'contactPointPhone'
+              }
+            }
+          })
+        }
+        SalesforceInteractions.sendEvent({
+          user: {
+            attributes: {
+              firstName: firstname || '',
+              lastName: lastname || '',
+              eventType: 'identity',
+              isAnonymous: 0
+            }
+          }
+        })
+      })
     
   </script>
 </html>
