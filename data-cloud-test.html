@@ -19,13 +19,13 @@ SalesforceInteractions.init({
 
 SalesforceInteractions.sendEvent({
     interaction : {
-        name : "View Catalog Object",
-        catalogObject: { 
+        name : "View Order",
+        orderObject: { 
           type : "Product", 
-          id : "65e4e737",
-          attributes: {
-            description: "Shoes"
-          }
+          orderId : "65e4e737",
+          sessionId : "65e4e737",
+          deviceId : "65e4e737",
+          pageView : 1
         }
     },
     user: {
